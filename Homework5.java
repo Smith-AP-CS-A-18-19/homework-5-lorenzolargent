@@ -3,10 +3,14 @@ public class Homework5 {
 	/* Finish the constructor and create any necessary instance
 	 * variables
 	 */
+	private int a;
+	private int b;
+	private String s;
 	public Homework5(String s, int a, int b) {
-
-	}
-
+this.a = a;
+this.b = b;
+this.s = s;
+}
 	/* Return a substring of the stored String, starting at index with
 	 * length characters. If length would run past the end of the String,
 	 * have the substring end at the end of the stored String.
@@ -16,7 +20,11 @@ public class Homework5 {
 	 * substring method in the String class
 	 */
 	public String substring(int index, int length) {
-
+		if (index + length > s.length()) {
+			return s.substring(index, s.length());
+		} else {
+			return (s.substring(index, index + length));
+		}
 	}
 
 	/* Return true if the stored String contains the provided String,
@@ -25,12 +33,23 @@ public class Homework5 {
 	 * an example
 	 */
 	public boolean contains(String s) {
+if (s.contains(s)) {
+	return true;
+} else {
+	return false;
+}
 
-	}
+}
 
 	/* Return the larger of the two stored numbers
 	 */
 	public int max() {
+if (a > b) {
+	return a;
+	}
+else {
+	return b;
+	}
 
 	}
 
@@ -60,7 +79,7 @@ public class Homework5 {
 			exitCode += 1;
 		}
 
-		if (!hw5.contains("Hello World")) {
+		if (hw5.contains("Hello World")) {
 			System.out.println("Pass 4");
 		} else {
 			System.out.println("Fail 4");
