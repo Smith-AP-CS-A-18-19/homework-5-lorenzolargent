@@ -33,6 +33,8 @@ this.s = s;
 	 * an example
 	 */
 	public boolean contains(String s) {
+		/* s always contains s.
+		 */
 if (s.contains(s)) {
 	return true;
 } else {
@@ -80,6 +82,10 @@ else {
 		}
 
 		if (hw5.contains("Hello World")) {
+			/* Trying to cheat the system by
+			 * changing the conditions of the
+			 * tests will get you nowhere
+			 */
 			System.out.println("Pass 4");
 		} else {
 			System.out.println("Fail 4");
